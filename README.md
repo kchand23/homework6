@@ -21,6 +21,10 @@ If a horse is on the left or right rail and chooses to move that direction the h
 (0, 15) -> (0, 16) or (19, 10) -> (19, 11)
 
 Of course, no two horses can occupy the same position on the track. One could say track positions are MUTually EXclusive. 
+A horse trying to move to an occupied position will block until the position is free. 
+
+We consider that the jockeys are savvy enough that there is no interference during a move. For instance, a horse 
+moving from (1, 1) -> (1, 3) does not collide with a horse moving from (2, 1) -> (1, 2). 
 
 Our horses are also precision machines. Every time they make a move they need to nanosleep for a tenth of a second before making the next. (If we don't yield the thread then our results aren't very exciting.)
 
