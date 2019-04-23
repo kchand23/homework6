@@ -91,4 +91,4 @@ and be compiled with
 ```BASH
 gcc hw6.c -lpthread
 ```
-
+Mac Folks - Sorry but the barriers aren't implemented on macOS. 
