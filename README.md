@@ -8,7 +8,7 @@ May 4th. On that day 20 horses will run 1.25 miles for the chance to split the r
 For this assignment we will simulate a running of the Kentucky Derby using concurrent processes and the pthreads library. 
 
 In our race 20 horses will compete on a track that is 20 lanes wide and 1250 units long. Horses start the race in the lane
-with their designated number. For example Horse 0 starts in position (0,0) and Horse 19 starts in position (0, 19). 
+with their designated number. For example Horse 0 starts in position (0,0) and Horse 19 starts in position (19, 0). 
 
 When you watch the derby, you'll see that horses start behind a barrier called a "starting gate" which opens at the 
 start of the race. We're asking that your horses are synchronized to all start at the same time. Your parent thread 
