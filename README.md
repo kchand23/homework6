@@ -2,6 +2,32 @@
 ## A Concurrent Program Using PThreads
 ## Due May 4
 
+## Update April 30
+I've added a utility so that you can test if your horses are clashing, or occupying the same space on the track. 
+I've also added two sample program outputs: results_clash.txt and results_clean.txt. 
+
+To use the utility you have to do a little command line preprocessing of the output. We will use awk and sed. Use the utility 
+like so:
+```BASH
+cat results_clean.txt | awk '$1=="Horse:" {print $2"\t"$4"\t"$6"\t"$8}' | sed 's\,\\g' | ./clash_detection.py
+```
+When you download the files, clash_detection.py may not be executable. You can change this with: `chmod 755 clash_detection.py`
+A critical thinking exercise: should you change file permissions to executable for untrusted files from the internet?
+
+If you're having trouble executing clash_detection.py check the shebang at the top of the file. This is the line that looks like: 
+`#! /usr/bin/python`
+Your python may not be in the same folder as mine. You can find out where your python executable is kept with `which python`. 
+Substitute the path given to your instance of python in the shebang line. 
+
+Our pipeline is using awk to isolate column 1 and check that it matches the regular expression "Horse:". If so it prints 
+columns 2, 4, 6, and 8 tab separated. Sed substitutes the comma with nothing. `clash_detection.py` receives a tab separated 
+list of horse number, lane, position, and lap. 
+
+To test your own output you can replace `cat results_clean.txt` with something like `a.out`. Of course you might want to save 
+your output so that you can troubleshoot. You all should have the piping and redirection skills to do that by now. 
+
+## Introduction
+
 The Kentucky Derby is the first of three races in Thoroughbred Racing's "Triple Crown." The 145th Kentucky Derby will run 
 May 4th. On that day 20 horses will run 1.25 miles for the chance to split the roughly $2MM Purse!
 
