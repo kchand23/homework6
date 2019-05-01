@@ -1,6 +1,7 @@
 # Homework 6 - Kentucky Derby
 ## A Concurrent Program Using PThreads
-## Due May 4
+## Due May 5 11:59PM
+Don't expect TAs to be available over the weekend.
 
 ## Update April 30
 I've added a utility so that you can test if your horses are clashing, or occupying the same space on the track. 
