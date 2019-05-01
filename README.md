@@ -3,6 +3,9 @@
 ## Due May 5 11:59PM
 Don't expect TAs to be available over the weekend.
 
+## Update May 1
+Your horse threads should only block if they are fighting over a contended (lane, position) on the track. 
+
 ## Update April 30
 I've added a utility so that you can test if your horses are clashing, or occupying the same space on the track. 
 I've also added two sample program outputs: results_clash.txt and results_clean.txt. 
